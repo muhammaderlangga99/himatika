@@ -29,6 +29,8 @@ class ProfileController extends Controller
         if ($request->profile) {
             $request->user()->profile = $request->file('profile')->store('avatars');
         }
+
+        // verifikasi email jika email baru
         $request->user()->fill($request->validated());
 
         if ($request->user()->isDirty('email')) {
