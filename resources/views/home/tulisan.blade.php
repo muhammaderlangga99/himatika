@@ -26,7 +26,7 @@
                     <a href="https://www.figma.com/community/file/1125744163617429490" class="inline-flex items-center justify-center w-full px-3 py-2 mb-6 mr-2 text-sm font-medium bg-blue-600 border border-gray-200 rounded-full sm:w-auto focus:outline-none hover:bg-blue-800 hover:text-slate-50 focus:z-10 focus:ring-4 focus:ring-gray-200 text-white">Baca artikel <i class="bi bi-arrow-right pl-2 animate-next"></i></a>
                 </div>
                 <!-- Add Navigation -->
-                    <div class="navigation flex justify-end space-x-6 self-end hidden lg:flex -translate-y-6">
+                    <div class="navigation justify-end space-x-6 self-end hidden lg:flex -translate-y-6">
                         <i class="bi bi-arrow-left-circle-fill text-blue-100 text-4xl hover:text-slate-300 active:text-slate-600"></i>
                         <i class="bi bi-arrow-right-circle-fill text-blue-100 text-4xl hover:text-slate-300 active:text-slate-600"></i>
                     </div>

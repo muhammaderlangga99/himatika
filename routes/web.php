@@ -1,10 +1,14 @@
 <?php
 
+use App\Models\Article;
+use Illuminate\Http\Request;
+use Yajra\DataTables\DataTables;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ArticlesController;
 use App\Http\Controllers\Auth\RegisteredUserController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,7 +38,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     // article page
-    Route::resource('articles', ArticlesController::class)->name('index', 'articles.index');
+    Route::get('/articles', [ArticlesController::class, 'index'])->name('articles.index');
 });
 
 require __DIR__ . '/auth.php';

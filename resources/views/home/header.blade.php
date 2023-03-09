@@ -4,7 +4,6 @@
                 <img src="{{ asset('img/Untitled design (1).png') }}" alt="hero image">
             </div>
             <div class="mr-auto place-self-center lg:col-span-7 relative">
-                <div class="pattern absolute w-96 h-32 -z-50 rounded-xl rounded-tl-full"></div>
                 <h1 class="max-w-2xl mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl">Adipisicing elit <br> voluptates earum et.</h1>
                 <p class="max-w-2xl mb-6 text-gray-500 lg:mb-8 md:text-lg lg:text-xl">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur at obcaecati, aliquam culpa consectetur eum</p>
                 <div class="space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
