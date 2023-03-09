@@ -16,7 +16,7 @@
                 @if ($user->count() > 0)
                 @foreach ($user as $use)
                 <!-- member Card -->
-                <div class="max-w-sm bg-white border border-gray-200 rounded-2xl shadow-xl shadow-blue-50 md:w-full md:max-w-none lg:w-72">
+                <div class="max-w-sm  border border-gray-200 rounded-2xl shadow-xl shadow-blue-50 md:w-full md:max-w-none lg:w-72">
                     <div class="flex justify-end px-4 pt-4">
                         <button id="dropdownButton" data-dropdown-toggle="{{$use->name}}" class="inline-block text-gray-500 hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg text-sm p-1.5" type="button">
                             <span class="sr-only">Open dropdown</span>
@@ -52,7 +52,7 @@
                 @endif
 
 
-                <div class="group bg-white hover:bg-white max-w-sm border h-96 lg:h-auto border-gray-200 md:w-full md:max-w-none lg:p-0 lg:w-72 flex flex-col justify-evenly rounded-2xl shadow-xl shadow-blue-50">
+                <div class="group hover:bg-white max-w-sm border h-96 lg:h-auto border-gray-200 md:w-full md:max-w-none lg:p-0 lg:w-72 flex flex-col justify-evenly rounded-2xl shadow-xl shadow-blue-50">
                     <i class="bi bi-arrow-right text-8xl text-blue-600 font-bold mx-auto animate-next"></i>
                     <h5 class="text-xl font-medium text-gray-900 text-center">Semua anggota</h5>
                     <span class="text-sm text-gray-500 text-center">adipisicing elit. <br> Facere, maxime!</span>
