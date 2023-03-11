@@ -2,11 +2,10 @@
     
 @else
 <header class="fixed w-full z-50">
-        <nav class="backdrop-blur-lg @if(!Request::is(['home', '/'])) bg-white @endif border-gray-200 py-2.5">
+        <nav class="backdrop-blur-lg border-gray-200 py-2.5 transition-all duration-100">
             <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
                 <a href="/home" class="flex items-center">
-                    <img src="{{ asset('img/HIMATIKA-Trilogi.png') }}" class="h-6 mr-3 sm:h-9" alt="Landwind Logo" />
-                    <span class="self-center text-xl font-semibold whitespace-nowrap">HIMATIKA</span>
+                    <img src="{{ asset('img/HIMATIKA-Trilogi.png') }}" class="h-6 mr-3 sm:h-10" alt="Landwind Logo" />
                 </a>
 
                 <div class="flex items-center lg:order-2">
@@ -47,11 +46,11 @@
                         </div>
                     </div>
                 @else
-                    <a href="/register" class="hidden lg:inline-block text-blue-700 ring-2 ring-blue-600 hover:bg-blue-600 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2 sm:mr-2 lg:mr-0 focus:outline-none hover:text-white">Sign Up</a>
+                    <a href="/register" class="hidden lg:inline-block text-blue-700 ring-2 ring-blue-600 hover:bg-blue-600 focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-4 lg:px-5 py-2 lg:py-2 sm:mr-2 lg:mr-0 focus:outline-none hover:text-white">Sign Up</a>
                     
-                    <a href="/login" class="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 focus:outline-none  mx-4">Log in</a>
+                    <a href="/login" class="text-white bg-blue-600 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-4 lg:px-5 py-2 lg:py-2.5 sm:mr-2 lg:mr-0 focus:outline-none  mx-4">Log in</a>
                 @endauth
-                    <button data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="mobile-menu-2" aria-expanded="false">
+                    <button id="collaps" data-collapse-toggle="mobile-menu-2" type="button" class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" aria-controls="mobile-menu-2" aria-expanded="false">
                         <span class="sr-only">Open main menu</span>
                         <i class="bi bi-list"></i>
                     </button>
@@ -88,3 +87,10 @@
         </nav>
     </header>
 @endif
+
+<script>
+    // toggle mobile menu clicked, background navbar  to white
+    document.getElementById('collaps').addEventListener('click', function() {
+        document.querySelector('nav').classList.toggle('bg-white');
+    });
+</script>

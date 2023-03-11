@@ -27,8 +27,7 @@
                 </div>
                 <img class="hidden mx-auto mb-4 rounded-lg lg:mb-0 lg:flex" src="{{asset('img/about.png')}}" alt="dashboard feature image">
             </div>
-
-
+            
             <!-- visi & misi -->
             <div class="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
                 <img class="hidden w-full mb-4 rounded-lg lg:mb-0 lg:flex" src="{{asset('img/visi.jpg')}}" alt="feature image 2">

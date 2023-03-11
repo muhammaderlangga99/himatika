@@ -19,13 +19,13 @@
                 {{-- edit profile --}}
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     <x-nav-link :href="route('profile.edit')" :active="request()->routeIs('profile.edit')">
-                        {{ __('Profile') }}
+                        {{ __('Edit Profile') }}
                     </x-nav-link>
                 </div>
                 {{-- tulis article --}}
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('articles.index')" :active="request()->routeIs('articles.index')">
-                        {{ __('Article lu') }}
+                    <x-nav-link :href="route('articles.index')" :active="request()->routeIs('articles.*')">
+                        {{ __('Article') }}
                     </x-nav-link>
                 </div>
             </div>
@@ -50,7 +50,7 @@
                                 <a href="/home" class="block px-4 py-2 hover:bg-gray-100">Home</a>
                             </li>
                             <li>
-                                <a href="{{route('profile.edit')}}" class="block px-4 py-2 hover:bg-gray-100">profile</a>
+                                <a href="/anggota/{{auth()->user()->instagram}}" class="block px-4 py-2 hover:bg-gray-100">profile</a>
                             </li>
                             </ul>
                         <div class="py-2">

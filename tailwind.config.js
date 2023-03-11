@@ -16,6 +16,7 @@ module.exports = {
             },
             animation: {
                 next: 'next 2s ease-in-out infinite',
+
             },
             keyframes: {
                 next: {

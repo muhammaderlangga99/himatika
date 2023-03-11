@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use Illuminate\Http\Request;
+use Yajra\DataTables\Contracts\DataTable;
+use Yajra\DataTables\DataTables;
 
 class ArticlesController extends Controller
 {
@@ -14,9 +16,13 @@ class ArticlesController extends Controller
      */
     public function index()
     {
-        return view('articles.index', [
-            'articles' => Article::all()
-        ]);
+        if (request()->ajax()) {
+            $articles = Article::where('user_id', auth()->id())->get();
+            return DataTables::of($articles)
+                ->make();
+        }
+
+        return view('articles.index');
     }
 
     /**
@@ -26,7 +32,7 @@ class ArticlesController extends Controller
      */
     public function create()
     {
-        //
+        return view('articles.create');
     }
 
     /**

@@ -1,5 +1,5 @@
 <!-- Start block -->
-    <section class="bg-white">
+    <section>
         <div class="max-w-screen-xl px-4 py-16 lg:py-24 mx-auto lg:px-6">
             <div class="max-w-screen-md mx-auto mb-8 text-center lg:mb-12">
                 <i class="bi bi-people text-2xl block text-blue-600"></i>
@@ -16,7 +16,7 @@
                 @if ($user->count() > 0)
                 @foreach ($user as $use)
                 <!-- member Card -->
-                <div class="max-w-sm bg-slate-50 border border-gray-200 rounded-2xl shadow-xl shadow-blue-50 md:w-full md:max-w-none lg:w-72">
+                <div class="max-w-sm  border border-gray-200 rounded-2xl shadow-xl shadow-blue-50 md:w-full md:max-w-none lg:w-72">
                     <div class="flex justify-end px-4 pt-4">
                         <button id="dropdownButton" data-dropdown-toggle="{{$use->name}}" class="inline-block text-gray-500 hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg text-sm p-1.5" type="button">
                             <span class="sr-only">Open dropdown</span>
@@ -42,7 +42,7 @@
                         <span class="text-sm text-gray-500">Ketua Himatika</span>
                         <span class="text-sm text-gray-500">{{'@'.$use->instagram}}</span>
                         <div class="flex mt-4 space-x-3 md:mt-6">
-                            <a href="/anggota/{{$use->instagram}}" class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-gray-900 bg-slate-50 border border-gray-300 rounded-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-200">Detail</a>
+                            <a href="/anggota/{{$use->instagram}}" class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-300 rounded-lg hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-200">Detail</a>
                         </div>
                     </div>
                 </div>
@@ -52,7 +52,7 @@
                 @endif
 
 
-                <div class="group bg-slate-50 hover:bg-white max-w-sm border h-96 lg:h-auto border-gray-200 md:w-full md:max-w-none lg:p-0 lg:w-72 flex flex-col justify-evenly rounded-2xl shadow-xl shadow-blue-50">
+                <div class="group hover:bg-white max-w-sm border h-96 lg:h-auto border-gray-200 md:w-full md:max-w-none lg:p-0 lg:w-72 flex flex-col justify-evenly rounded-2xl shadow-xl shadow-blue-50">
                     <i class="bi bi-arrow-right text-8xl text-blue-600 font-bold mx-auto animate-next"></i>
                     <h5 class="text-xl font-medium text-gray-900 text-center">Semua anggota</h5>
                     <span class="text-sm text-gray-500 text-center">adipisicing elit. <br> Facere, maxime!</span>

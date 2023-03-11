@@ -8,12 +8,13 @@
     }
   </style>
 
-<section class=" bg-gray-50">
+<section class="bg-gray-50">
         <div class="max-w-screen-xl px-4 py-16 mx-auto space-y-12 lg:space-y-20 lg:py-28 lg:px-6">
             <div class="asd items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
-                <div class="bg-slate-900 shadow-inner rounded-3xl p-5 lg:p-10 flex flex-col">
+                <div class="bg-slate-100 border border-slate-300 rounded-3xl p-5 lg:py-20 shadow flex flex-col relative">
+                    <div class="w-52 h-52 rounded-full bg-blue-200 blur-2xl absolute right-0"></div>
                     {{-- slider --}}
-                      <swiper-container class="mySwiper" effect="cards" grab-cursor="true">
+                      <swiper-container class="mySwiper" effect="cards" grab-cursor="true" id="event">
                         <swiper-slide class="bg-slate-100">
                             <div class="m-auto thumb w-80 h-48 rounded-2xl bg-white overflow-hidden">
                                 <img src="{{asset('img/toa-heftiba-O3ymvT7Wf9U-unsplash.jpg')}}" alt="" class="w-full m-auto">
@@ -88,4 +89,16 @@
             </div>
         </div>
 </section>
+<script>
+    const event = document.querySelector('#event')
+        Object.assign(event, {
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            
+            }
+        })
+
+        event.initialize();
+</script>
 
