@@ -67,7 +67,7 @@
         <script src="https://cdn.datatables.net/1.13.3/js/jqzuery.dataTables.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
         <script src="https://cdn.datatables.net/v/bs5/dt-1.13.2/r-2.4.0/datatables.min.js"></script>
-
+        <script src="https://cdn.datatables.net/plug-ins/1.13.3/pagination/scrolling.js"></script>
         <script>
             $(document).ready(function () {
             $('#article').DataTable({
@@ -75,6 +75,7 @@
                     serverSide: true,
                     ajax: '{{ route('articles.index') }}',
                     columns: [
+                        // satu kolom untuk nomor urut
                         { data: 'id', name: 'id' },
                         { data: 'title', name: 'title' },
                         { data: 'category.name', name: 'category.name' },
@@ -83,9 +84,21 @@
                     ],
                     columnDefs: [
                         {
+                            targets: 0,
+                            render: function (data, type, row, meta) {
+                                return meta.row + meta.settings._iDisplayStart + 1;
+                            }
+                        },
+                        {
+                            target: 1,
+                            render: function (data, type, row) {
+                                return '<a href="/articles/' + row.slug + '" class="font-semibold text-slate-900">' + row.title + '</a>';
+                            }
+                        },
+                        {
                             targets: 4,
                             render: function (data, type, row) {
-                                return '<div class="d-flex justify-content-around"><a href="#" class="btn btn-sm btn-primary rounded-circle shadow-lg"><i class="bi bi-pen"></i></a> <a href="#" class="btn btn-sm btn-danger rounded-circle shadow-lg"><i class="bi bi-trash"></i></a> <a href="#" class="btn btn-sm btn-success rounded-circle shadow-lg"><i class="bi bi-arrow-right-short"></i></a> </div>';
+                                return '<div class="hidden lg:flex justify-content-evenly"><a href="/article/'+ row.slug +'/edit" class="btn btn-sm hover:bg-blue-600  rounded-circle border-1 border-blue-600 text-blue-600 hover:text-white shadow-md"><i class="bi bi-pen"></i></a> <a href="/article/'+ row.slug +'/hapus" class="btn btn-sm hover:bg-red-600  rounded-circle border-1 border-red-600 text-red-600 hover:text-white shadow-md"><i class="bi bi-trash2"></i></a> <a href="/article/'+ row.slug +'" class="shadow-md btn btn-sm hover:bg-green-600  rounded-circle border-1 border-green-600 text-green-600 hover:text-white"><i class="bi bi-arrow-right"></i></a> </div>';
                             }
                         }
                     ],

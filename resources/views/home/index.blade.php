@@ -22,6 +22,10 @@
     @include('home.about')
     {{-- end about himatika --}}
 
+    {{-- marquee --}}
+    @include('home.marquee')
+    {{-- end marquee --}}
+
     {{-- anggota --}}
     @include('home.anggota')
     {{-- end anggota --}}
