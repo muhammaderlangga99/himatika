@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use App\Models\Category;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
-use Yajra\DataTables\Contracts\DataTable;
 use Yajra\DataTables\DataTables;
+use Yajra\DataTables\Contracts\DataTable;
 
 class ArticlesController extends Controller
 {
@@ -32,7 +34,9 @@ class ArticlesController extends Controller
      */
     public function create()
     {
-        return view('articles.create');
+        return view('articles.create', [
+            'category' => Category::all(),
+        ]);
     }
 
     /**
@@ -43,7 +47,23 @@ class ArticlesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'thumbnail' => 'required|image',
+            'title' => 'required | unique:articles,title',
+            'content' => 'required | min:10',
+            'category' => 'required',
+        ]);
+
+        Article::create([
+            'user_id' => auth()->id(),
+            'slug' => Str::slug($request->title),
+            'thumbnail' => $request->file('thumbnail')->store('thumbnail'),
+            'category_id' => $request->category,
+            'title' => Str::title($request->title),
+            'excerpt' => Str::limit($request->content, 30, '...'),
+            'body' => $request->content,
+        ]);
+        return redirect()->route('articles.index')->with('success', 'Artikel berhasil ditambahkan');
     }
 
     /**
@@ -65,7 +85,10 @@ class ArticlesController extends Controller
      */
     public function edit(Article $article)
     {
-        //
+        return view('articles.edit', [
+            'article' => $article,
+            'category' => Category::all(),
+        ]);
     }
 
     /**
@@ -77,7 +100,32 @@ class ArticlesController extends Controller
      */
     public function update(Request $request, Article $article)
     {
-        //
+        $request->validate([
+            'thumbnail' => 'image',
+            'title' => 'required | unique:articles,title,' . $article->id,
+            'content' => 'required | min:10',
+            'category' => 'required',
+        ]);
+
+        $thumbnail = '';
+
+        if ($request->hasFile('thumbnail')) {
+            $thumbnail = $request->file('thumbnail')->store('thumbnail');
+        } else {
+            $thumbnail = $article->thumbnail;
+        }
+
+
+        Article::where('id', $article->id)->update([
+            'slug' => Str::slug($request->title),
+            'thumbnail' => $thumbnail,
+            'category_id' => $request->category,
+            'title' => Str::title($request->title),
+            'excerpt' => Str::limit($request->content, 30, '...'),
+            'body' => $request->content,
+        ]);
+
+        return redirect()->route('articles.index')->with('success', 'Artikel berhasil diubah');
     }
 
     /**
@@ -88,6 +136,7 @@ class ArticlesController extends Controller
      */
     public function destroy(Article $article)
     {
-        //
+        Article::destroy($article->id);
+        return redirect()->route('articles.index')->with('success', 'Artikel berhasil dihapus');
     }
 }

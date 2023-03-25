@@ -40,6 +40,10 @@ Route::middleware('auth')->group(function () {
     // article page
     Route::get('/articles', [ArticlesController::class, 'index'])->name('articles.index');
     Route::get('/articles/create', [ArticlesController::class, 'create'])->name('articles.create');
+    Route::post('/articles', [ArticlesController::class, 'store'])->name('articles.store');
+    Route::delete('/articles/{article:slug}', [ArticlesController::class, 'destroy'])->name('articles.destroy');
+    Route::get('/articles/{article:slug}/edit', [ArticlesController::class, 'edit'])->name('articles.edit');
+    Route::put('/articles/{article:slug}', [ArticlesController::class, 'update'])->name('articles.update');
 });
 
 require __DIR__ . '/auth.php';

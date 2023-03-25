@@ -26,7 +26,7 @@ class ProfileController extends Controller
      */
     public function update(ProfileUpdateRequest $request): RedirectResponse
     {
-        if ($request->profile) {
+        if ($request->profile == true) {
             $request->user()->profile = $request->file('profile')->store('avatars');
         }
 

@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-center text-gray-800 leading-tight">
-            {{ __('📝 Buat Article') }}
+            {{ __('Edit Article') }}
         </h2>
     </x-slot>
 
@@ -14,7 +14,9 @@
                         <div class="bg-white overflow-hidden">
                             <div class="p-6 bg-white border-b border-gray-200">
                                 {{-- FORM --}}
-                                <form method="POST" action="{{ route('articles.store') }}" enctype="multipart/form-data">
+                                <form method="POST" action="/articles/{{ $article->slug }}"
+                                    enctype="multipart/form-data">
+                                    @method('PUT')
                                     @csrf
                                     <div class="flex mb-6 items-center justify-center w-full">
                                         <label for="dropzone-file"
@@ -44,7 +46,7 @@
                                                 class="text-red-500">*</span></label></br>
                                         <input type="text"
                                             class="border-2 border-blue-300 w-full rounded-xl @if ($errors->has('title')) border-red-500 @endif"
-                                            name="title" id="title" value="{{ old('title') }}">
+                                            name="title" id="title" value="{{ old('title', $article->title) }}">
                                         @if ($errors->has('title'))
                                             <span class="text-red-500">*{{ $errors->first('title') }}</span>
                                         @endif
@@ -59,7 +61,7 @@
                                             class="bg-gray-50 border border-gray-900 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full  p-2.5 @if ($errors->has('category')) text-white bg-red-600 @endif">
                                             <option value="">Category</option>
                                             @foreach ($category as $cat)
-                                                @if (old('category') == $cat->id)
+                                                @if (old('category', $article->category_id) == $cat->id)
                                                     <option value="{{ $cat->id }}" selected>{{ $cat->name }}
                                                     </option>
                                                 @else
@@ -75,7 +77,8 @@
                                     <div class="mb-8">
                                         <label class="text-md text-gray-600">Content <span
                                                 class="text-red-500">*</span></label></br>
-                                        <textarea name="content" class="border-2 rounded-2xl" value="{{ old('content') }}">
+                                        <textarea name="content" class="border-2 rounded-2xl">
+                                            {{ $article->body }}"
                                         </textarea>
                                         @if ($errors->has('content'))
                                             <span class="text-red-500">*{{ $errors->first('content') }}</span>
