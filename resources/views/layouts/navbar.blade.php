@@ -1,7 +1,8 @@
 @if ($page == 'dashboard')
 @else
     <header class="fixed w-full z-50">
-        <nav class="backdrop-blur-lg border-gray-200 py-2.5 transition-all duration-100">
+        <nav
+            class="backdrop-blur-lg @if (Request::is('tulisan/*')) border-b border-slate-900 py-6 @else  py-4 @endif transition-all duration-100">
             <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
                 <a href="/home" class="flex items-center">
                     <img src="{{ asset('img/HIMATIKA-Trilogi.png') }}" class="h-6 mr-3 sm:h-10" alt="Landwind Logo" />

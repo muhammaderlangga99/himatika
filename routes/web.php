@@ -25,6 +25,12 @@ Route::controller(HomeController::class)->group(function () {
     Route::get('/home', 'index')->name('home');
 });
 
+Route::get('/tulisan/{article:slug}', function (Article $article) {
+    return view('articles.read', [
+        'article' => $article,
+        'page' => $article->title,
+    ]);
+});
 
 Route::get('/anggota', [RegisteredUserController::class, 'index']);
 Route::get('/anggota/{user:instagram}', [RegisteredUserController::class, 'show']);

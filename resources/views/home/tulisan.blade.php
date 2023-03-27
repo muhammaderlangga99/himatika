@@ -53,7 +53,7 @@
                         {{ $article->updated_at->diffForHumans() }}</p>
                 </div>
                 <div class="title w-80 lg:w-72 m-auto mt-3 pb-3">
-                    <a href=""
+                    <a href="/tulisan/{{ $article->slug }}"
                         class="inline-block text-2xl font-semibold text-slate-800 leading-tight tracking-wide">{{ $article->title }}</a>
                 </div>
             </swiper-slide>

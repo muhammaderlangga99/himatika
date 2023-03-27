@@ -8,7 +8,7 @@
     }
 </style>
 
-<section class="bg-blue-50 border-b border-slate-700 border-t">
+<section class="bg-blue-50 border-slate-700">
     <div class="max-w-screen-xl px-4 py-16 mx-auto space-y-12 lg:space-y-20 lg:py-28 lg:px-6">
         <div class="asd items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
             <div class="bg-slate-100 border border-slate-300 rounded-3xl p-5 lg:py-20 shadow flex flex-col relative">
