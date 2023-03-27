@@ -116,13 +116,13 @@
                     {
                         targets: 4,
                         render: function(data, type, row) {
-                            return '<div class="hidden lg:flex justify-content-evenly"><a href="/articles/' +
+                            return '<div class="flex gap-3 md:justify-content-evenly"><a href="/articles/' +
                                 row.slug +
-                                '/edit" class="btn btn-sm hover:bg-blue-600  rounded-circle border-1 border-blue-600 text-blue-600 hover:text-white shadow-md"><i class="bi bi-pen"></i></a> <form action="/articles/' +
+                                '/edit" class="btn btn-sm hover:bg-blue-600  rounded-xl border-1 border-blue-600 text-blue-600 hover:text-white shadow-md"><i class="bi bi-pen"></i></a> <form action="/articles/' +
                                 row.slug +
-                                '" method="post" onClick="konfirm()">@method('delete') @csrf <button type="submit" class="btn btn-sm hover:bg-red-600 rounded-circle border-1 border-red-600 text-red-600 hover:text-white shadow-md"><i class="bi bi-trash2"></i></button></form> <a href="/article/' +
+                                '" method="post" onClick="konfirm()">@method('delete') @csrf <button type="submit" class="btn btn-sm hover:bg-red-600 rounded-xl border-1 border-red-600 text-red-600 hover:text-white shadow-md"><i class="bi bi-trash2"></i></button></form> <a href="/articles/' +
                                 row.slug +
-                                '" class="shadow-md btn btn-sm hover:bg-green-600  rounded-circle border-1 border-green-600 text-green-600 hover:text-white"><i class="bi bi-arrow-right"></i></a> </div>'
+                                '" class="shadow-md btn btn-sm hover:bg-green-600  rounded-xl border-1 border-green-600 text-green-600 hover:text-white"><i class="bi bi-arrow-right"></i></a> </div>'
                         }
                     }
                 ],

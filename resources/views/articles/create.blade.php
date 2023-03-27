@@ -75,7 +75,8 @@
                                     <div class="mb-8">
                                         <label class="text-md text-gray-600">Content <span
                                                 class="text-red-500">*</span></label></br>
-                                        <textarea name="content" class="border-2 rounded-2xl" value="{{ old('content') }}">
+                                        <textarea name="content" class="border-2 rounded-2xl">
+                                            {{ old('content') }}
                                         </textarea>
                                         @if ($errors->has('content'))
                                             <span class="text-red-500">*{{ $errors->first('content') }}</span>

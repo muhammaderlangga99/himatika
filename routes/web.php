@@ -38,12 +38,15 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     // article page
-    Route::get('/articles', [ArticlesController::class, 'index'])->name('articles.index');
-    Route::get('/articles/create', [ArticlesController::class, 'create'])->name('articles.create');
-    Route::post('/articles', [ArticlesController::class, 'store'])->name('articles.store');
-    Route::delete('/articles/{article:slug}', [ArticlesController::class, 'destroy'])->name('articles.destroy');
-    Route::get('/articles/{article:slug}/edit', [ArticlesController::class, 'edit'])->name('articles.edit');
-    Route::put('/articles/{article:slug}', [ArticlesController::class, 'update'])->name('articles.update');
+    Route::controller(ArticlesController::class)->group(function () {
+        Route::get('/articles', 'index')->name('articles.index');
+        Route::get('/articles/create', 'create')->name('articles.create');
+        Route::post('/articles', 'store')->name('articles.store');
+        Route::get('/articles/{article:slug}', 'show')->name('articles.show');
+        Route::delete('/articles/{article:slug}', 'destroy')->name('articles.destroy');
+        Route::get('/articles/{article:slug}/edit', 'edit')->name('articles.edit');
+        Route::put('/articles/{article:slug}', 'update')->name('articles.update');
+    });
 });
 
 require __DIR__ . '/auth.php';
