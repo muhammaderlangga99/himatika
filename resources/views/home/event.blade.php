@@ -8,7 +8,8 @@
     }
 </style>
 
-<section class="bg-blue-50 border-slate-700">
+<section class="bg-blue-50 border-slate-700 relative">
+    <i class="bi bi-calendar-event text-8xl block absolute right-96 top-10 shaadow text-blue-100"></i>
     <div class="max-w-screen-xl px-4 py-16 mx-auto space-y-12 lg:space-y-20 lg:py-28 lg:px-6">
         <div class="asd items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
             <div class="bg-slate-100 border border-slate-300 rounded-3xl p-5 lg:py-20 shadow flex flex-col relative">
@@ -102,7 +103,7 @@
                     traditional ITSM solutions. Accelerate critical development work, eliminate toil, and deploy changes
                     with ease.</p>
                 <a href="https://www.figma.com/community/file/1125744163617429490"
-                    class="inline-flex items-center justify-center w-full px-5 py-3 mb-2 mr-2 text-sm font-medium bg-blue-600 border border-gray-200 rounded-full sm:w-auto focus:outline-none hover:bg-blue-800 hover:text-slate-50 focus:z-10 focus:ring-4 focus:ring-gray-200 text-white">Lihat
+                    class="inline-flex items-center justify-center w-full px-5 py-3 mb-2 mr-2 text-sm font-medium bg-blue-600 border border-gray-200 rounded-full sm:w-auto focus:outline-none hover:bg-blue-800 hover:text-slate-50 focus:z-10 focus:ring-4 focus:ring-gray-200 text-white shadow-2xl shadow-blue-500">Lihat
                     semua <i class="bi bi-arrow-right pl-2 animate-next"></i></a>
             </div>
         </div>
@@ -118,6 +119,4 @@
 
         }
     })
-
-    event.initialize();
 </script>

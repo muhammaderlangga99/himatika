@@ -14,8 +14,10 @@
       object-fit: cover;
     } */
 </style>
-<section class="bg-gray-50 lg:pt-16 lg:pb-1 py-8 relative">
-    <div class="max-w-screen-xl px-4 mx-auto space-y-12 lg:space-y-20  lg:px-6">
+<section class="bg-blue-50 lg:pt-16 lg:pb-1 py-8 relative">
+    <i class="bi bi-quote animate-pulse block text-blue-100 absolute right-96 top-10 text-8xl"></i>
+
+    <div class="max-w-screen-xl px-4 mx-auto space-y-12 lg:space-y-20 lg:px-6">
         <!-- Row -->
         <div class="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
             <div class="text-gray-500 sm:text-lg">
@@ -26,7 +28,7 @@
                     illum ipsum id laudantium sunt omnis sequi inventore laboriosam, officia, fuga nam tenetur? Porro,
                     quos.</p>
                 <a href="https://www.figma.com/community/file/1125744163617429490"
-                    class="inline-flex items-center justify-center w-full px-4 py-3 mb-6 mr-2 text-sm font-medium bg-blue-600 border border-gray-200 rounded-full sm:w-auto focus:outline-none hover:bg-blue-800 hover:text-slate-50 focus:z-10 focus:ring-4 focus:ring-gray-200 text-white">Baca
+                    class="inline-flex items-center justify-center w-full px-4 py-3 mb-6 mr-2 text-sm font-medium bg-blue-700 border border-gray-200 rounded-full sm:w-auto focus:outline-none hover:bg-blue-800 hover:text-slate-50 focus:z-10 focus:ring-4 focus:ring-gray-200 text-white shadow-2xl shadow-blue-500">Baca
                     artikel <i class="bi bi-arrow-right pl-2 animate-next"></i></a>
             </div>
             <!-- Add Navigation -->
@@ -52,7 +54,7 @@
                     <p class="font-mono text-xs text-slate-900 font-light my-auto">
                         {{ $article->updated_at->diffForHumans() }}</p>
                 </div>
-                <div class="title w-80 lg:w-72 m-auto mt-3 pb-3">
+                <div class="title w-80 m-auto mt-3 pb-3">
                     <a href="/tulisan/{{ $article->slug }}"
                         class="inline-block text-2xl font-semibold text-slate-800 leading-tight tracking-wide">{{ $article->title }}</a>
                 </div>

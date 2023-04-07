@@ -13,6 +13,7 @@ module.exports = {
         extend: {
             fontFamily: {
                 sans: ["Nunito", ...defaultTheme.fontFamily.sans],
+                poppins: ["Poppins", "sans-serif"],
             },
             animation: {
                 next: 'next 2s ease-in-out infinite',

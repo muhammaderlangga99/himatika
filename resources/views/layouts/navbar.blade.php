@@ -6,12 +6,13 @@
             <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
                 <a href="/home" class="flex items-center">
                     <img src="{{ asset('img/HIMATIKA-Trilogi.png') }}" class="h-6 mr-3 sm:h-10" alt="Landwind Logo" />
+                    <span class="font-semibold text-lg text-blue-600 font-poppins">Akademi</span>
                 </a>
 
                 <div class="flex items-center lg:order-2">
                     @auth
                         <button id="dropdownAvatarNameButton" data-dropdown-toggle="dropdownAvatarName"
-                            class="flex bg-white items-center text-sm font-medium text-gray-900 rounded-full hover:text-blue-600 md:mr-0 focus:ring-4 focus:ring-gray-100"
+                            class="flex backdrop-blur-3xl backdrop-contrast-200 items-center text-sm font-medium text-gray-900 rounded-full hover:text-blue-600 md:mr-0 focus:ring-4 focus:ring-gray-100"
                             type="button">
                             <span class="sr-only">Open user menu</span>
                             <div class="img w-8 h-8 mr-2 rounded-full overflow-hidden">
@@ -87,10 +88,6 @@
                         <li>
                             <a href="/blog"
                                 class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0  @if (Request::is('blog')) text-blue-700 @endif">Blog</a>
-                        </li>
-                        <li>
-                            <a href="/ngumpul"
-                                class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0  @if (Request::is('ngumpul')) text-blue-700 @endif">Ngumpul</a>
                         </li>
                         <li>
                             <a href="/event"
