@@ -15,17 +15,19 @@
                             class="flex backdrop-blur-3xl backdrop-contrast-200 items-center text-sm font-medium text-gray-900 rounded-full hover:text-blue-600 md:mr-0 focus:ring-4 focus:ring-gray-100"
                             type="button">
                             <span class="sr-only">Open user menu</span>
-                            <div class="img w-8 h-8 mr-2 rounded-full overflow-hidden">
+                            <div class="img w-8 h-8 lg:mr-2 rounded-full overflow-hidden">
                                 <img src="@if (auth()->user()->profile) {{ asset('storage/' . auth()->user()->profile) }} @else {{ asset('img/HIMATIKA-Trilogi.png') }} @endif"
                                     class="w-full" alt="">
                             </div>
-                            {{ Str::of(auth()->user()->name)->limit(10) }}
-                            <svg class="w-4 h-4 mx-1.5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <path fill-rule="evenodd"
-                                    d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                                    clip-rule="evenodd"></path>
-                            </svg>
+                            <span class="my-auto mx-1 hidden font-semibold md:inline-block">
+                                {{ Str::of(auth()->user()->name)->limit(10) }}
+                                <svg class="w-4 h-4 mx-1.5 inline" aria-hidden="true" fill="currentColor"
+                                    viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                        clip-rule="evenodd"></path>
+                                </svg>
+                            </span>
                         </button>
 
                         <!-- Dropdown menu -->

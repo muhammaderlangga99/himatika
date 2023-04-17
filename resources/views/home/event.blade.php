@@ -11,86 +11,112 @@
 <section class="bg-blue-50 border-slate-700 relative">
     <i class="bi bi-calendar-event text-8xl block absolute right-96 top-10 shaadow text-blue-100"></i>
     <div class="max-w-screen-xl px-4 py-16 mx-auto space-y-12 lg:space-y-20 lg:py-28 lg:px-6">
-        <div class="asd items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
+        <div class="items-center gap-8 md:grid md:grid-cols-2 xl:gap-16">
             <div class="bg-slate-100 border border-slate-300 rounded-3xl p-5 lg:py-20 shadow flex flex-col relative">
                 <div class="w-52 h-52 rounded-full bg-blue-200 blur-2xl absolute right-0"></div>
                 {{-- slider --}}
-                <swiper-container class="mySwiper" effect="cards" grab-cursor="true" id="event">
-                    <swiper-slide class="bg-slate-100">
-                        <div class="m-auto thumb w-80 h-48 rounded-2xl bg-white overflow-hidden">
+                <swiper-container class="mySwiper w-72" effect="cards" grab-cursor="true" id="event">
+                    {{-- .1. --}}
+                    <swiper-slide class="bg-white group">
+                        <div class="m-auto flex items-center thumb w-72 h-40 rounded-t-lg bg-white overflow-hidden">
                             <img src="{{ asset('img/toa-heftiba-O3ymvT7Wf9U-unsplash.jpg') }}" alt=""
-                                class="w-full m-auto">
+                                class="w-full object-cover">
                         </div>
-                        <div class="date flex w-72 font-base m-auto mt-1 text-white space-x-2">
-                            <p class="category text-white px-3 rounded-full bg-red-600 text-sm font-medium">Article</p>
+                        <div class="date flex w-64 font-base m-auto mt-8 text-white space-x-2">
+                            <p
+                                class="category text-blue-600 px-3 py-1 rounded-full border border-blue-100 bg-blue-50 text-xs font-medium">
+                                coming
+                            </p>
                             <p class="font-mono text-xs text-slate-900 font-light my-auto">14 Februari, 2023</p>
                         </div>
-                        <div class="title w-72 m-auto mt-3 pb-3">
+                        <div class="title w-64 m-auto mt-2 pb-6">
                             <a href=""
-                                class="inline-block text-2xl font-semibold text-slate-800 leading-tight tracking-wide">
+                                class="inline-block text-xl group-hover:text-blue-600  font-bold text-slate-800 leading-none tracking-wide">
                                 Accelerate critical solutions work</a>
+                            <span class="text-xs tracking-widest text-slate-600">offline event</span>
                         </div>
                     </swiper-slide>
-                    <swiper-slide class="bg-slate-100">
-                        <div class="m-auto thumb w-80 h-48 rounded-2xl bg-white overflow-hidden">
+                    {{-- .2. --}}
+                    <swiper-slide class="bg-white group">
+                        <div class="m-auto flex items-center thumb w-72 h-40 rounded-t-lg bg-white overflow-hidden">
                             <img src="{{ asset('img/rayul-_M6gy9oHgII-unsplash.jpg') }}" alt=""
-                                class="w-full m-auto">
+                                class="w-full object-cover">
                         </div>
-                        <div class="date flex w-72 font-base m-auto mt-1 text-white space-x-2">
-                            <p class="category text-white px-3 rounded-full bg-red-600 text-sm font-medium">Article</p>
+                        <div class="date flex w-64 font-base m-auto mt-8 text-white space-x-2">
+                            <p
+                                class="category text-blue-600 px-3 py-1 rounded-full border border-blue-100 bg-blue-50 text-xs font-medium">
+                                coming
+                            </p>
                             <p class="font-mono text-xs text-slate-900 font-light my-auto">14 Februari, 2023</p>
                         </div>
-                        <div class="title w-72 m-auto mt-3 pb-3">
+                        <div class="title w-64 m-auto mt-2 pb-6">
                             <a href=""
-                                class="inline-block text-2xl font-semibold text-slate-800 leading-tight tracking-wide">
+                                class="inline-block text-xl group-hover:text-blue-600  font-bold text-slate-800 leading-none tracking-wide">
                                 Accelerate critical solutions work</a>
+                            <span class="text-xs tracking-widest text-slate-600">offline event</span>
                         </div>
                     </swiper-slide>
-                    <swiper-slide class="bg-slate-100">
-                        <div class="m-auto thumb w-80 h-48 rounded-2xl bg-white overflow-hidden">
+                    {{-- .3. --}}
+                    <swiper-slide class="bg-white group">
+                        <div class="m-auto flex items-center thumb w-72 h-40 rounded-t-lg bg-white overflow-hidden">
                             <img src="{{ asset('img/aiony-haust-3TLl_97HNJo-unsplash.jpg') }}" alt=""
-                                class="w-full m-auto">
+                                class="w-full object-cover">
                         </div>
-                        <div class="date flex w-72 font-base m-auto mt-1 text-white space-x-2">
-                            <p class="category text-white px-3 rounded-full bg-red-600 text-sm font-medium">Article</p>
+                        <div class="date flex w-64 font-base m-auto mt-8 text-white space-x-2">
+                            <p
+                                class="category text-blue-600 px-3 py-1 rounded-full border border-blue-100 bg-blue-50 text-xs font-medium">
+                                coming
+                            </p>
                             <p class="font-mono text-xs text-slate-900 font-light my-auto">14 Februari, 2023</p>
                         </div>
-                        <div class="title w-72 m-auto mt-3 pb-3">
+                        <div class="title w-64 m-auto mt-2 pb-6">
                             <a href=""
-                                class="inline-block text-2xl font-semibold text-slate-800 leading-tight tracking-wide">
+                                class="inline-block text-xl group-hover:text-blue-600  font-bold text-slate-800 leading-none tracking-wide">
                                 Accelerate critical solutions work</a>
+                            <span class="text-xs tracking-widest text-slate-600">offline event</span>
                         </div>
                     </swiper-slide>
-                    <swiper-slide class="bg-slate-100">
-                        <div class="m-auto thumb w-80 h-48 rounded-2xl bg-white overflow-hidden">
+                    {{-- .4. --}}
+                    <swiper-slide class="bg-white group">
+                        <div class="m-auto flex items-center thumb w-72 h-40 rounded-t-lg bg-white overflow-hidden">
                             <img src="{{ asset('img/toa-heftiba-O3ymvT7Wf9U-unsplash.jpg') }}" alt=""
-                                class="w-full m-auto">
+                                class="w-full object-cover">
                         </div>
-                        <div class="date flex w-72 font-base m-auto mt-1 text-white space-x-2">
-                            <p class="category text-white px-3 rounded-full bg-red-600 text-sm font-medium">Article</p>
+                        <div class="date flex w-64 font-base m-auto mt-8 text-white space-x-2">
+                            <p
+                                class="category text-red-600 px-3 py-1 rounded-full border border-red-100 bg-red-50 text-xs font-medium">
+                                Past
+                            </p>
                             <p class="font-mono text-xs text-slate-900 font-light my-auto">14 Februari, 2023</p>
                         </div>
-                        <div class="title w-72 m-auto mt-3 pb-3">
+                        <div class="title w-64 m-auto mt-2 pb-6">
                             <a href=""
-                                class="inline-block text-2xl font-semibold text-slate-800 leading-tight tracking-wide">
+                                class="inline-block text-xl group-hover:text-blue-600  font-bold text-slate-800 leading-none tracking-wide">
                                 Accelerate critical solutions work</a>
+                            <span class="text-xs tracking-widest text-slate-600">offline event</span>
                         </div>
                     </swiper-slide>
-                    <swiper-slide class="bg-slate-100">
-                        <div class="m-auto thumb w-80 h-48 rounded-2xl bg-white overflow-hidden">
+                    {{-- .5. --}}
+                    <swiper-slide class="bg-white group">
+                        <div class="m-auto flex items-center thumb w-72 h-40 rounded-t-lg bg-white overflow-hidden">
                             <img src="{{ asset('img/rayul-_M6gy9oHgII-unsplash.jpg') }}" alt=""
-                                class="w-full m-auto">
+                                class="w-full object-cover">
                         </div>
-                        <div class="date flex w-72 m-auto font-base mt-1 text-white space-x-2">
-                            <p class="category text-white px-3 rounded-full bg-red-600 text-sm font-medium">Article</p>
+                        <div class="date flex w-64 m-auto font-base mt-8 text-white space-x-2">
+                            <p
+                                class="category text-red-600 px-3 py-1 rounded-full border border-red-100 bg-red-50 text-xs font-medium">
+                                Past
+                            </p>
                             <p class="font-mono text-xs text-slate-900 font-light my-auto">14 Februari, 2023</p>
                         </div>
-                        <div class="title w-72 m-auto mt-3 pb-3">
+                        <div class="title w-64 m-auto mt-2 pb-6">
                             <a href=""
-                                class="inline-block text-2xl font-semibold text-slate-800 leading-tight tracking-wide">
+                                class="inline-block text-xl group-hover:text-blue-600  font-bold text-slate-800 leading-none tracking-wide">
                                 Accelerate critical solutions work</a>
+                            <span class="text-xs tracking-widest text-slate-600">offline event</span>
                         </div>
                     </swiper-slide>
+                    {{-- ... --}}
                 </swiper-container>
             </div>
 

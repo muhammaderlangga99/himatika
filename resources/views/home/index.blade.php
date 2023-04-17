@@ -5,7 +5,7 @@
         .pattern {
             background-color: #F8FAFC;
             opacity: 0.3;
-            background-image:  linear-gradient(#444cf7 1.3px, transparent 1.3px), linear-gradient(to right, #444cf7 1.3px, #F8FAFC 1.3px);
+            background-image: linear-gradient(#444cf7 1.3px, transparent 1.3px), linear-gradient(to right, #444cf7 1.3px, #F8FAFC 1.3px);
             background-size: 26px 26px;
         }
     </style>

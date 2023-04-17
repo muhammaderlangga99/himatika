@@ -25,7 +25,7 @@
         -webkit-text-stroke-color: #2F6AEC;
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
         .marquee h1 {
             display: block;
         }

@@ -1,6 +1,6 @@
 <!-- Start block -->
 <section class="bg-gray-50">
-    <div class="max-w-screen-xl px-4 py-8 mx-auto space-y-12 lg:space-y-20 lg:pt-24 lg:pb-16 lg:px-6">
+    <div class="max-w-screen-xl px-4 pt-20 space-y-32 mx-auto lg:space-y-24 lg:pt-24 lg:pb-16 lg:px-6">
         <!-- Row -->
         <div class="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
             <div class="text-gray-500 sm:text-lg">

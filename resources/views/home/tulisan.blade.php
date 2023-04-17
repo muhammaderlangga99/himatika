@@ -17,7 +17,7 @@
 <section class="bg-blue-50 lg:pt-16 lg:pb-1 py-8 relative">
     <i class="bi bi-quote animate-pulse block text-blue-100 absolute right-96 top-10 text-8xl"></i>
 
-    <div class="max-w-screen-xl px-4 mx-auto space-y-12 lg:space-y-20 lg:px-6">
+    <div class="max-w-screen-xl px-4 mx-auto space-y-12 lg:space-y-20 lg:px-6 md:mb-20">
         <!-- Row -->
         <div class="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
             <div class="text-gray-500 sm:text-lg">

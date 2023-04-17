@@ -31,13 +31,13 @@
 
             </div>
 
-            <div class="space-y-8 lg:grid lg:grid-cols-4 sm:gap-6 xl:gap-10 lg:space-y-0">
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-3 lg:grid-cols-4 sm:gap-6 xl:gap-10 lg:space-y-0">
                 {{-- hitung user lebih dari 0 --}}
                 @if ($user->count() > 0)
                     @foreach ($user as $use)
                         <!-- member Card -->
                         <div
-                            class="max-w-sm bg-slate-50 border border-gray-200 rounded-lg shadow md:w-full md:max-w-none lg:w-72">
+                            class="max-w-sm bg-slate-50 border border-gray-200 rounded-lg shadow-lg shadow-blue-50 md:w-full md:max-w-none lg:w-72">
                             <div class="flex justify-end px-4 pt-4">
                                 <button id="dropdownButton" data-dropdown-toggle="{{ $use->name }}"
                                     class="inline-block text-gray-500 hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg text-sm p-1.5"
@@ -47,7 +47,7 @@
                                 </button>
                                 <!-- Dropdown menu -->
                                 <div id="{{ $use->name }}"
-                                    class="z-10 hidden text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
+                                    class="z-10 hidden text-base list-none backdrop-blur-xl divide-y divide-gray-100 rounded-lg shadow-lg shadow-slate-200 w-44">
                                     <ul class="py-2" aria-labelledby="dropdownButton">
                                         <li>
                                             <a href="https://instagram.com/{{ $use->instagram }}"
@@ -63,16 +63,17 @@
                                 </div>
                             </div>
                             <div class="flex flex-col items-center pb-10">
-                                <div class="img w-24 h-24 mb-3 rounded-full overflow-hidden">
+                                <div class="img w-16 h-16 md:w-24 md:h-24 mb-3 rounded-full overflow-hidden">
                                     <img src="@if ($use->profile) {{ asset("storage/$use->profile") }} @else {{ asset('img/HIMATIKA-Trilogi.png') }} @endif "
                                         class="w-full" alt="">
                                 </div>
-                                <h5 class="mb-1 text-xl font-medium text-gray-900">{{ $use->name }}</h5>
+                                <h5 class="mb-1 md:text-xl font-medium text-gray-900 mx-auto text-center truncate w-9/12">
+                                    {{ $use->name }}</h5>
                                 <span class="text-sm text-gray-500">Ketua Himatika</span>
                                 <span class="text-sm text-gray-500">{{ '@' . $use->instagram }}</span>
                                 <div class="flex mt-4 space-x-3 md:mt-6">
                                     <a href="/anggota/{{ $use->instagram }}"
-                                        class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-gray-900 bg-white border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200">Detail</a>
+                                        class="inline-flex items-center px-4 py-2 text-xs md:text-sm font-medium text-center text-gray-900 border border-gray-300 shadow-inner rounded-xl hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200">Detail</a>
                                 </div>
                             </div>
                         </div>
