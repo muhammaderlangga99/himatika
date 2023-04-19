@@ -1,7 +1,7 @@
 @if ($page == 'dashboard')
 @else
     <header class="fixed w-full z-50">
-        <nav
+        <nav data-aos="fade-down" data-aos-easing="ease-in-out" data-aos-duration="700"
             class="backdrop-blur-lg @if (Request::is('tulisan/*')) border-b border-slate-900 py-6 @else  py-4 @endif transition-all duration-100">
             <div class="flex flex-wrap items-center justify-between max-w-screen-xl px-4 mx-auto">
                 <a href="/home" class="flex items-center">

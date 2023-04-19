@@ -3,7 +3,8 @@
             <div class="md:hidden">
                 <img src="{{ asset('img/Untitled design (1).png') }}" alt="hero image">
             </div>
-            <div class="mr-auto place-self-center lg:col-span-7 relative">
+            <div class="mr-auto place-self-center lg:col-span-7 relative" data-aos="fade-right"
+                data-aos-easing="ease-in-out" data-aos-duration="700">
                 <h1 class="max-w-2xl mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl xl:text-6xl">
                     Adipisicing elit <br> voluptates earum et.</h1>
                 <p class="max-w-2xl mb-6 text-gray-500 lg:mb-8 md:text-lg lg:text-xl">Lorem ipsum dolor sit amet
@@ -19,7 +20,8 @@
                 </div>
             </div>
             <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-                <img src="{{ asset('img/Untitled design (1).png') }}" alt="hero image">
+                <img src="{{ asset('img/Untitled design (1).png') }}" alt="hero image" data-aos="fade-left"
+                    data-aos-easing="ease-in-out" data-aos-duration="700">
             </div>
         </div>
     </header>

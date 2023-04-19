@@ -3,16 +3,6 @@
         width: 100%;
         height: 100%;
     }
-
-    /* .card {
-    } */
-
-    /* .card img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    } */
 </style>
 <section class="bg-blue-50 lg:pt-16 lg:pb-1 py-8 relative">
     <i class="bi bi-quote animate-pulse block text-blue-100 absolute right-96 top-10 text-8xl"></i>
@@ -20,7 +10,8 @@
     <div class="max-w-screen-xl px-4 mx-auto space-y-12 lg:space-y-20 lg:px-6 md:mb-20">
         <!-- Row -->
         <div class="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
-            <div class="text-gray-500 sm:text-lg">
+            <div class="text-gray-500 sm:text-lg" data-aos="fade-right" data-aos-easing="ease-in-out"
+                data-aos-duration="400">
                 <i class="bi bi-quote animate-pulse text-3xl block text-blue-600"></i>
                 <p class="text-blue-500 font-medium">Tulisan anggota</p>
                 <h2 class="mb-2 text-3xl font-extrabold tracking-tight text-gray-900">Ilmu kami ditulis di sini!</h2>
@@ -44,10 +35,10 @@
 
     <swiper-container id="article" init="false" class="container m-auto overflow-x-hidden">
         @foreach ($articles as $article)
-            <swiper-slide class="card">
+            <swiper-slide class="card group">
                 <img src="{{ $article->thumbnail }}" alt=""
-                    class="object-cover m-auto thumb w-80 h-44 rounded-2xl bg-white hover:shadow-xl shadow-slate-100 transition-all">
-                <div class="date flex w-80 font-base m-auto mt-1 text-white space-x-2">
+                    class="object-cover m-auto thumb w-80 h-44 rounded-2xl bg-white group-hover:shadow-lg  group-hover:shadow-slate-300 transition-all duration-300">
+                <div class="date flex w-80 font-base m-auto mt-2 text-white space-x-2">
                     <p
                         class="category text-white px-3 py-1 rounded-full bg-{{ $article->category->color }}-600 text-xs font-medium">
                         {{ $article->category->name }}</p>
@@ -56,7 +47,7 @@
                 </div>
                 <div class="title w-80 m-auto mt-3 pb-3">
                     <a href="/tulisan/{{ $article->slug }}"
-                        class="inline-block text-2xl font-semibold text-slate-800 leading-tight tracking-wide">{{ $article->title }}</a>
+                        class="tulisan inline-block text-2xl font-bold leading-tight tracking-normal group-hover:underline duration-500">{{ $article->title }}</a>
                 </div>
             </swiper-slide>
         @endforeach

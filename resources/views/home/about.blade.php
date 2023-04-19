@@ -3,7 +3,8 @@
     <div class="max-w-screen-xl px-4 pt-20 space-y-32 mx-auto lg:space-y-24 lg:pt-24 lg:pb-16 lg:px-6">
         <!-- Row -->
         <div class="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
-            <div class="text-gray-500 sm:text-lg">
+            <div class="text-gray-800 sm:text-lg" data-aos="fade-right" data-aos-easing="ease-in-out"
+                data-aos-duration="700">
                 <i class="bi bi-code-square animate-pulse text-3xl block text-blue-600"></i>
                 <p class="text-blue-500 font-medium">Komunitas Teknologi</p>
                 <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900">Tentang Kami</h2>
@@ -34,15 +35,16 @@
                 <p class="mb-8 lg:text-lg">Deliver great service experiences fast - without the complexity of
                     traditional ITSM solutions.</p>
             </div>
-            <img class="hidden mx-auto mb-4 rounded-lg lg:mb-0 lg:flex" src="{{ asset('img/about.png') }}"
+            <img class="hidden mx-auto mb-4 rounded-lg lg:mb-0 lg:flex" src="{{ asset('img/solid.svg') }}"
                 alt="dashboard feature image">
         </div>
 
         <!-- visi & misi -->
         <div class="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
-            <img class="hidden w-full mb-4 rounded-lg lg:mb-0 lg:flex" src="{{ asset('img/visi.jpg') }}"
+            <img class="hidden w-full mb-4 rounded-lg lg:mb-0 lg:flex" src="{{ asset('img/visimisi.svg') }}"
                 alt="feature image 2">
-            <div class="text-gray-500 sm:text-lg">
+            <div class="text-gray-800 sm:text-lg" data-aos="fade-right" data-aos-duration="700"
+                data-aos-easing="ease-in-out">
                 <i class="bi bi-bullseye animate-bounce text-2xl block text-blue-600"></i>
                 <p class="text-blue-500 font-medium">Tujuan komunitas</p>
                 <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900">Gagasan</h2>

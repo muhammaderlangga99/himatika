@@ -19,8 +19,8 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->string('instagram');
-            $table->string('github');
+            $table->string('instagram')->nullable();
+            $table->string('github')->nullable();
             $table->text('bio')->default('Tidak ada bio');
             $table->text('profile')->nullable();
             $table->rememberToken();

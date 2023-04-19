@@ -120,7 +120,8 @@
                 </swiper-container>
             </div>
 
-            <div class="text-gray-500 sm:text-lg mt-4 lg:mt-0">
+            <div class="text-gray-500 sm:text-lg mt-4 lg:mt-0" data-aos="fade-right" data-aos-easing="ease-in-out"
+                data-aos-duration="500">
                 <i class="bi bi-calendar-event text-2xl block text-blue-600"></i>
                 <p class="text-blue-500">Himatika <span class="font-medium">event.</span></p>
                 <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900">consectetur adipisicing elit

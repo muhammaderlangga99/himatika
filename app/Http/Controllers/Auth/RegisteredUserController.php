@@ -34,16 +34,16 @@ class RegisteredUserController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:' . User::class],
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
-            'instagram' => ['required', 'unique:' . User::class, 'min:3'],
-            'github' => ['required', 'unique:' . User::class]
+            // 'instagram' => ['required', 'unique:' . User::class, 'min:3'],
+            // 'github' => ['required', 'unique:' . User::class]
         ]);
 
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
-            'instagram' => $request->instagram,
-            'github' => $request->github
+            // 'instagram' => $request->instagram,
+            // 'github' => $request->github
         ]);
 
         event(new Registered($user));

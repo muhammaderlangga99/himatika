@@ -13,13 +13,13 @@
 
         </div>
 
-        <div class=" grid grid-cols-2 md:grid-cols-3 gap-3 lg:grid-cols-4 sm:gap-6 xl:gap-10 lg:space-y-0">
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-3 lg:grid-cols-4 sm:gap-6 xl:gap-10 lg:space-y-0">
             {{-- hitung user lebih dari 0 --}}
             @if ($user->count() > 0)
                 @foreach ($user as $use)
                     <!-- member Card -->
-                    <div
-                        class="max-w-sm  border border-gray-200 rounded-2xl shadow-xl shadow-blue-50 md:w-full md:max-w-none lg:w-72">
+                    <div class="card max-w-sm  border border-gray-200 rounded-2xl shadow-xl shadow-blue-50 md:w-full md:max-w-none lg:w-72"
+                        data-aos="zoom-in" data-aos-easing="ease-in-out" data-aos-duration="500">
                         <div class="flex justify-end px-4 pt-4">
                             <button id="dropdownButton" data-dropdown-toggle="{{ $use->name }}"
                                 class="inline-block text-gray-500 hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg text-sm p-1.5"
@@ -45,12 +45,12 @@
                             </div>
                         </div>
                         <div class="flex flex-col items-center pb-10">
-                            <div class="img w-16 h-16 md:w-24 md:h-24 mb-3 rounded-full overflow-hidden">
+                            <div class="img w-16 h-16 lg:w-24 lg:h-24 mb-3 rounded-full overflow-hidden">
                                 <img src="@if ($use->profile) {{ asset("storage/$use->profile") }} @else {{ asset('img/HIMATIKA-Trilogi.png') }} @endif "
                                     class="w-full" alt="">
                             </div>
                             <h5
-                                class="mb-1 text-lg md:text-xl mx-auto text-center w-9/12 truncate font-medium text-gray-900">
+                                class="mb-1 text-lg lg:text-xl mx-auto text-center w-9/12 truncate font-medium text-gray-900">
                                 {{ $use->name }}</h5>
                             <span class="text-sm text-gray-500">Ketua Himatika</span>
                             <span class="text-sm text-gray-500">{{ '@' . $use->instagram }}</span>
@@ -66,8 +66,8 @@
             @endif
 
 
-            <div
-                class="group hover:bg-white max-w-sm border h-80 lg:h-auto border-gray-200 md:w-full md:max-w-none lg:p-0 lg:w-72 flex flex-col justify-center gap-6 rounded-2xl shadow-2xl shadow-blue-100 md:hidden lg:flex">
+            <div class="group hover:bg-white max-w-sm border h-80 lg:h-auto border-gray-200 md:w-full md:max-w-none lg:p-0 lg:w-72 flex flex-col justify-center gap-6 rounded-2xl shadow-2xl shadow-blue-100 md:hidden lg:flex"
+                data-aos="zoom-in" data-aos-easing="ease-in-out" data-aos-duration="500">
                 <i class="bi bi-arrow-right text-5xl lg:text-8xl text-blue-600 font-bold mx-auto animate-next"></i>
                 <h5 class="text-lg md:text-xl font-medium text-gray-900 text-center">Semua anggota</h5>
                 <span class="text-sm text-gray-500 text-center">adipisicing elit. <br> Facere, maxime!</span>
