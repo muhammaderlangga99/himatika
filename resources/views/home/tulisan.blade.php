@@ -3,15 +3,29 @@
         width: 100%;
         height: 100%;
     }
+
+    .link-underline {
+        background-image: linear-gradient(to right, #000 0%, #000 100%) !important; // warna garis bawah
+        background-size:  !important; // ukuran garis bawah
+        background-repeat: no-repeat !important;
+        background-position: 0 100% !important;
+        background-repeat: no-repeat !important;
+        background-position: 0 100% !important;
+        background-size: 0 3px !important;
+        transition: .4s ease-in-out !important;
+    }
+
+    a.card:hover .link-underline {
+        background-size: 100% 3px !important;
+    }
 </style>
 <section class="bg-blue-50 lg:pt-16 lg:pb-1 py-8 relative">
     <i class="bi bi-quote animate-pulse block text-blue-100 absolute right-96 top-10 text-8xl"></i>
 
-    <div class="max-w-screen-xl px-4 mx-auto space-y-12 lg:space-y-20 lg:px-6 md:mb-20">
+    <div class="max-w-screen-xl px-4 mx-auto space-y-12 lg:space-y-20 lg:px-6 ">
         <!-- Row -->
         <div class="items-center gap-8 lg:grid lg:grid-cols-2 xl:gap-16">
-            <div class="text-gray-500 sm:text-lg" data-aos="fade-right" data-aos-easing="ease-in-out"
-                data-aos-duration="400">
+            <div class="text-gray-500 sm:text-lg" data-aos="fade-right">
                 <i class="bi bi-quote animate-pulse text-3xl block text-blue-600"></i>
                 <p class="text-blue-500 font-medium">Tulisan anggota</p>
                 <h2 class="mb-2 text-3xl font-extrabold tracking-tight text-gray-900">Ilmu kami ditulis di sini!</h2>
@@ -33,22 +47,28 @@
     </div>
 
 
-    <swiper-container id="article" init="false" class="container m-auto overflow-x-hidden">
+    <swiper-container id="article" init="false" class="container max-w-7xl m-auto overflow-x-hidden">
         @foreach ($articles as $article)
             <swiper-slide class="card group">
-                <img src="{{ $article->thumbnail }}" alt=""
-                    class="object-cover m-auto thumb w-80 h-44 rounded-2xl bg-white group-hover:shadow-lg  group-hover:shadow-slate-300 transition-all duration-300">
-                <div class="date flex w-80 font-base m-auto mt-2 text-white space-x-2">
-                    <p
-                        class="category text-white px-3 py-1 rounded-full bg-{{ $article->category->color }}-600 text-xs font-medium">
-                        {{ $article->category->name }}</p>
-                    <p class="font-mono text-xs text-slate-900 font-light my-auto">
-                        {{ $article->updated_at->diffForHumans() }}</p>
-                </div>
-                <div class="title w-80 m-auto mt-3 pb-3">
-                    <a href="/tulisan/{{ $article->slug }}"
-                        class="tulisan inline-block text-2xl font-bold leading-tight tracking-normal group-hover:underline duration-500">{{ $article->title }}</a>
-                </div>
+                <a href="/tulisan/{{ $article->slug }}" class="card">
+                    <img src="{{ $article->thumbnail }}" alt=""
+                        class="object-cover m-auto thumb w-10/12 h-44 rounded-2xl bg-white group-hover:shadow-lg  group-hover:shadow-slate-300 transition-all duration-300">
+                    <div class="date flex w-10/12 font-base m-auto mt-2 text-white space-x-2">
+                        <p
+                            class="category text-white px-3 py-1 rounded-full bg-{{ $article->category->color }}-600 text-xs font-medium">
+                            {{ $article->category->name }}</p>
+                        <p class="font-mono text-xs text-slate-900 font-light my-auto">
+                            {{ $article->updated_at->diffForHumans() }}</p>
+                    </div>
+                    <div class="title w-10/12 m-auto mt-3 pb-3">
+                        <h4
+                            class="tulisan inline-block text-xl font-semibold font-poppins leading-tight tracking-normal duration-500">
+                            <span class="link link-underline link-underline-black">
+                                {{ $article->title }}
+                            </span>
+                        </h4>
+                    </div>
+                </a>
             </swiper-slide>
         @endforeach
     </swiper-container>
@@ -82,8 +102,8 @@
                     spaceBetween: 10,
                 },
                 1024: {
-                    slidesPerView: 4,
-                    spaceBetween: 30,
+                    slidesPerView: 3,
+                    spaceBetween: 50,
                 },
             },
         });

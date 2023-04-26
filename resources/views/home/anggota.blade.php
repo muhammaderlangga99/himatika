@@ -69,8 +69,9 @@
             <div class="group hover:bg-white max-w-sm border h-80 lg:h-auto border-gray-200 md:w-full md:max-w-none lg:p-0 lg:w-72 flex flex-col justify-center gap-6 rounded-2xl shadow-2xl shadow-blue-100 md:hidden lg:flex"
                 data-aos="zoom-in" data-aos-easing="ease-in-out" data-aos-duration="500">
                 <i class="bi bi-arrow-right text-5xl lg:text-8xl text-blue-600 font-bold mx-auto animate-next"></i>
-                <h5 class="text-lg md:text-xl font-medium text-gray-900 text-center">Semua anggota</h5>
-                <span class="text-sm text-gray-500 text-center">adipisicing elit. <br> Facere, maxime!</span>
+                <h5 class="text-base md:text-xl font-medium text-gray-900 text-center">Semua anggota</h5>
+                <span class="text-sm text-gray-500 text-center">adipisicing elit. <br> Facere,
+                    maxime!</span>
                 <a href="/anggota"
                     class="inline-flex text-sm items-center px-4 py-2 text-md font-medium text-center bg-blue-600 text-white border border-gray-300 rounded-full hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-gray-200 mx-auto">Explore</a>
             </div>

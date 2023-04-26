@@ -20,7 +20,7 @@ class ProfileUpdateRequest extends FormRequest
             'email' => ['email', 'max:255', Rule::unique(User::class)->ignore($this->user()->id)],
             'instagram' => ['required', 'min:3', 'max:255', Rule::unique(User::class)->ignore($this->user()->id)],
             'github' => ['required', 'min:3', 'max:255', Rule::unique(User::class)->ignore($this->user()->id)],
-            'bio' => ['required', 'min:10', 'max:255'],
+            'bio' => ['required', 'min:3', Rule::unique(User::class)->ignore($this->user()->id)],
             'profile' => ['image'],
         ];
     }

@@ -19,7 +19,7 @@
     <section class="sidebar max-w-md col-span-2 hidden md:flex flex-col items-center border-l border-slate-800">
         <div class="w-8/12 space-y-4 mt-9">
             <p class="font-medium font-poppins uppercase">about author</p>
-            <div class="font-serif text-sm tracking-wide font-light">
+            <div class="font-serif text-sm tracking-wide font-light leading-relaxed">
                 {!! $article->user->bio !!}
             </div>
 

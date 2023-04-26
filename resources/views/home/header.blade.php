@@ -1,5 +1,9 @@
     <header>
-        <div class="grid max-w-screen-xl px-4 pt-20 pb-8 mx-auto lg:gap-8 xl:gap-0 lg:py-5 lg:grid-cols-12 lg:pt-20">
+        <div
+            class="grid max-w-screen-xl px-4 pt-20 pb-8 mx-auto lg:gap-8 xl:gap-0 lg:py-5 lg:grid-cols-12 lg:pt-20 relative">
+            <div
+                class="absolute top-12 w-80 h-80 bg-blue-100 blur-3xl -translate-x-48 -z-30 rounded-full hidden lg:inline-block">
+            </div>
             <div class="md:hidden">
                 <img src="{{ asset('img/Untitled design (1).png') }}" alt="hero image">
             </div>

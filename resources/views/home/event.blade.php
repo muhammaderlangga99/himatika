@@ -13,7 +13,6 @@
     <div class="max-w-screen-xl px-4 py-16 mx-auto space-y-12 lg:space-y-20 lg:py-28 lg:px-6">
         <div class="items-center gap-8 md:grid md:grid-cols-2 xl:gap-16">
             <div class="bg-slate-100 border border-slate-300 rounded-3xl p-5 lg:py-20 shadow flex flex-col relative">
-                <div class="w-52 h-52 rounded-full bg-blue-200 blur-2xl absolute right-0"></div>
                 {{-- slider --}}
                 <swiper-container class="mySwiper w-72" effect="cards" grab-cursor="true" id="event">
                     {{-- .1. --}}
@@ -120,8 +119,7 @@
                 </swiper-container>
             </div>
 
-            <div class="text-gray-500 sm:text-lg mt-4 lg:mt-0" data-aos="fade-right" data-aos-easing="ease-in-out"
-                data-aos-duration="500">
+            <div class="text-gray-500 sm:text-lg mt-4 lg:mt-0" data-aos="fade-right">
                 <i class="bi bi-calendar-event text-2xl block text-blue-600"></i>
                 <p class="text-blue-500">Himatika <span class="font-medium">event.</span></p>
                 <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900">consectetur adipisicing elit
