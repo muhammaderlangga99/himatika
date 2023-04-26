@@ -38,7 +38,7 @@
                     @endif
                     <p class="text-xs text-slate-500 text-center my-1">login untuk berikan yang terbaik untuk
                         himatika</p>
-                    <a href="#"
+                    <a href="{{ route('github.index') }}"
                         class="w-full bg-gray-900 rounded-full mt-2 text-white inline-block text-center py-2 text-sm"><i
                             class="text-base bi bi-github mr-2"></i> Login
                         with

@@ -49,16 +49,36 @@
                                 <div id="{{ $use->name }}"
                                     class="z-10 hidden text-base list-none backdrop-blur-xl divide-y divide-gray-100 rounded-lg shadow-lg shadow-slate-200 w-44">
                                     <ul class="py-2" aria-labelledby="dropdownButton">
-                                        <li>
-                                            <a href="https://instagram.com/{{ $use->instagram }}"
-                                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"><i
-                                                    class="bi bi-instagram mr-2"></i> Instagram</a>
-                                        </li>
-                                        <li>
-                                            <a href="https://github.com/{{ $use->github }}"
-                                                class="block px-4 py-2 text-sm hover:bg-gray-100"><i
-                                                    class="bi bi-github mr-2"></i> Github</a>
-                                        </li>
+                                        @if ($use->instagram > 0 && $use->github > 0)
+                                            <li>
+                                                <a href="https://instagram.com/{{ $use->instagram }}"
+                                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"><i
+                                                        class="bi bi-instagram mr-2"></i> Instagram</a>
+                                            </li>
+                                            <li>
+                                                <a href="https://github.com/{{ $use->github }}"
+                                                    class="block px-4 py-2 text-sm hover:bg-gray-100"><i
+                                                        class="bi bi-github mr-2"></i> Github</a>
+                                            </li>
+                                        @elseif($use->github > 0)
+                                            <li>
+                                                <a href="https://github.com/{{ $use->github }}"
+                                                    class="block px-4 py-2 text-sm hover:bg-gray-100"><i
+                                                        class="bi bi-github mr-2"></i> Github</a>
+                                            </li>
+                                        @elseif($use->instagram > 0)
+                                            <li>
+                                                <a href="https://instagram.com/{{ $use->instagram }}"
+                                                    class="block px-4 py-2 text-sm hover:bg-gray-100"><i
+                                                        class="bi bi-instagram mr-2"></i> Instagram</a>
+                                            </li>
+                                        @else
+                                            <li>
+                                                <p class="px-3 text-xs font-medium font-poppins text-slate-400">media
+                                                    sosial belum
+                                                    dicantumkan</p>
+                                            </li>
+                                        @endif
                                     </ul>
                                 </div>
                             </div>
@@ -70,9 +90,17 @@
                                 <h5 class="mb-1 md:text-xl font-medium text-gray-900 mx-auto text-center truncate w-9/12">
                                     {{ $use->name }}</h5>
                                 <span class="text-sm text-gray-500">Ketua Himatika</span>
-                                <span class="text-sm text-gray-500">{{ '@' . $use->instagram }}</span>
+                                @if ($use->instagram > 0)
+                                    <span class="text-sm text-gray-500">{{ '@' . $use->instagram }}</span>
+                                @elseif($use->github > 0)
+                                    <span class="text-sm text-gray-500">{{ '@' . $use->github }}</span>
+                                @elseif($use->instagram > 0 && $use->github > 0)
+                                    <span class="text-sm text-gray-500">{{ '@' . $use->instagram }}</span>
+                                @else
+                                    <span class="text-sm text-gray-500">Tidak ada username</span>
+                                @endif
                                 <div class="flex mt-4 space-x-3 md:mt-6">
-                                    <a href="/anggota/{{ $use->instagram }}"
+                                    <a href="/anggota/{{ $use->name }}"
                                         class="inline-flex items-center px-4 py-2 text-xs md:text-sm font-medium text-center text-gray-900 border border-gray-300 shadow-inner rounded-xl hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200">Detail</a>
                                 </div>
                             </div>

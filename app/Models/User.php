@@ -24,7 +24,8 @@ class User extends Authenticatable
         'password',
         'instagram',
         'github',
-        'bio'
+        'bio',
+        'github_id',
     ];
 
     /**

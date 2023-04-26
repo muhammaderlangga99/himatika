@@ -55,7 +55,7 @@
                             <span class="text-sm text-gray-500">Ketua Himatika</span>
                             <span class="text-sm text-gray-500">{{ '@' . $use->instagram }}</span>
                             <div class="flex mt-4 space-x-3 md:mt-6">
-                                <a href="/anggota/{{ $use->instagram }}"
+                                <a href="/anggota/{{ $use->name }}"
                                     class="inline-flex items-center px-4 py-2 text-sm font-medium text-center text-gray-900 shadow-inner bg-white border border-gray-300 rounded-full hover:bg-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-200">Detail</a>
                             </div>
                         </div>

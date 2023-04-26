@@ -8,6 +8,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ArticlesController;
 use App\Http\Controllers\Auth\RegisteredUserController;
+use App\Http\Controllers\GithubController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,7 +34,7 @@ Route::get('/tulisan/{article:slug}', function (Article $article) {
 });
 
 Route::get('/anggota', [RegisteredUserController::class, 'index']);
-Route::get('/anggota/{user:instagram}', [RegisteredUserController::class, 'show']);
+Route::get('/anggota/{user:name}', [RegisteredUserController::class, 'show']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -55,4 +56,8 @@ Route::middleware('auth')->group(function () {
     });
 });
 
+Route::controller(GithubController::class)->group(function () {
+    Route::get('/github/auth/redirect', 'index')->name('github.index');
+    Route::get('/github/auth/callback', 'callback')->name('github.callback');
+});
 require __DIR__ . '/auth.php';

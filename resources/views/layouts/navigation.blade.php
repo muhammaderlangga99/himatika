@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
+<nav x-data="{ open: false }" class=" border-b border-gray-100">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
@@ -54,7 +54,7 @@
                 <div id="dropdownAvatarName"
                     class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
                     <div class="px-4 py-3 text-sm text-gray-900">
-                        <div class="font-medium ">{{ auth()->user()->name }}</div>
+                        <div class="font-bold truncate">{{ auth()->user()->name }}</div>
                         <div class="truncate">{{ auth()->user()->email }}</div>
                     </div>
                     <ul class="py-2 text-sm text-gray-700"
@@ -63,7 +63,7 @@
                             <a href="/home" class="block px-4 py-2 hover:bg-gray-100">Home</a>
                         </li>
                         <li>
-                            <a href="/anggota/{{ auth()->user()->instagram }}"
+                            <a href="/anggota/{{ auth()->user()->name }}"
                                 class="block px-4 py-2 hover:bg-gray-100">profile</a>
                         </li>
                     </ul>

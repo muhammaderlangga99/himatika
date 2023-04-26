@@ -43,7 +43,7 @@
                                     <a href="/dashboard" class="block px-4 py-2 hover:bg-gray-100">Dashboard</a>
                                 </li>
                                 <li>
-                                    <a href="/anggota/{{ auth()->user()->instagram }}"
+                                    <a href="/anggota/{{ auth()->user()->name }}"
                                         class="block px-4 py-2 hover:bg-gray-100">profile</a>
                                 </li>
                             </ul>
