@@ -12,7 +12,7 @@
         background-repeat: no-repeat !important;
         background-position: 0 100% !important;
         background-size: 0 3px !important;
-        transition: .4s ease-in-out !important;
+        transition: .5s ease-in-out !important;
     }
 
     a.card:hover .link-underline {
@@ -32,7 +32,7 @@
                 <p class="mb-4 lg:text-lg">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis vero
                     illum ipsum id laudantium sunt omnis sequi inventore laboriosam, officia, fuga nam tenetur? Porro,
                     quos.</p>
-                <a href="https://www.figma.com/community/file/1125744163617429490"
+                <a href="/blog"
                     class="inline-flex items-center justify-center w-full px-4 py-3 mb-6 mr-2 text-sm font-medium bg-blue-700 border border-gray-200 rounded-full sm:w-auto focus:outline-none hover:bg-blue-800 hover:text-slate-50 focus:z-10 focus:ring-4 focus:ring-gray-200 text-white shadow-2xl shadow-blue-500">Baca
                     artikel <i class="bi bi-arrow-right pl-2 animate-next"></i></a>
             </div>

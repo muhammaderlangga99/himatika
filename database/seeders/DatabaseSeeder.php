@@ -25,15 +25,6 @@ class DatabaseSeeder extends Seeder
         Article::factory(40)->create();
 
         User::create([
-            'name' => 'M. Erlangga',
-            'email' => 'muhammaderlangga@gmail.com',
-            'email_verified_at' => now(),
-            'password' => Hash::make('muhammad'), // password
-            'instagram' => 'muhammaderlangga99',
-            'github' => 'muhammaderlangga99',
-        ]);
-
-        User::create([
             'name' => 'Sonia R. I',
             'email' => 'sonia@gmail.com',
             'email_verified_at' => now(),

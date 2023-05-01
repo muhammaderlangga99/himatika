@@ -28,7 +28,6 @@
                         <span class="sr-only">Search</span>
                     </button>
                 </form>
-
             </div>
 
             <div class="grid grid-cols-2 md:grid-cols-3 gap-3 lg:grid-cols-4 sm:gap-6 xl:gap-10 lg:space-y-0">

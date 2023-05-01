@@ -53,12 +53,13 @@
                 <i class="bi bi-bullseye text-2xl block text-blue-600"></i>
                 <p class="text-blue-500 font-medium">Tujuan komunitas</p>
                 <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900">Gagasan</h2>
-                <p class="mb-5 lg:text-base tracking-wider font-light text-slate-700">Deliver great service experiences
+                <p class="mb-3 lg:text-base tracking-wider font-light text-slate-700">Deliver great service
+                    experiences
                     fast - without the complexity of
                     traditional ITSM solutions. Accelerate critical development work, eliminate toil, and deploy changes
                     with ease.</p>
                 <!-- List -->
-                <div role="list" class="pt-8 space-y-5 border-t border-gray-200 my-7">
+                <div role="list" class="pt-3 space-y-5 border-gray-200 my-7">
                     <h2 class="mb-4 text-3xl font-extrabold tracking-tight text-gray-900">Tugas</h2>
                     <ul role="list" class="space-y-3">
                         <li class="flex space-x-3">

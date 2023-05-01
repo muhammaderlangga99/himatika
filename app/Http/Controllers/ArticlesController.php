@@ -60,7 +60,6 @@ class ArticlesController extends Controller
             'thumbnail' => $request->file('thumbnail')->store('thumbnail'),
             'category_id' => $request->category,
             'title' => Str::title($request->title),
-            'excerpt' => Str::limit($request->content, 30, '...'),
             'body' => $request->content,
         ]);
         return redirect()->route('articles.index')->with('success', 'Artikel berhasil ditambahkan');
@@ -123,7 +122,6 @@ class ArticlesController extends Controller
             'thumbnail' => $thumbnail,
             'category_id' => $request->category,
             'title' => Str::title($request->title),
-            'excerpt' => Str::limit($request->content, 30, '...'),
             'body' => $request->content,
         ]);
 

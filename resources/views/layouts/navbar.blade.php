@@ -85,20 +85,20 @@
                         </li>
                         <li>
                             <a href="/anggota"
-                                class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 @if (Request::is('anggota')) text-blue-700 @endif">Anggota</a>
+                                class="block py-2 pl-3 pr-4 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0 @if (Request::is(['anggota'])) text-blue-700 @endif">Anggota</a>
                         </li>
                         <li>
                             <a href="/blog"
-                                class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0  @if (Request::is('blog')) text-blue-700 @endif">Blog</a>
+                                class="block py-2 pl-3 pr-4 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0  @if (Request::is(['blog'])) text-blue-700 @endif">Blog</a>
                         </li>
                         <li>
                             <a href="/event"
-                                class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0  @if (Request::is('event')) text-blue-700 @endif">Event
+                                class="block py-2 pl-3 pr-4 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0  @if (Request::is(['event'])) text-blue-700 @endif">Event
                                 Himatika</a>
                         </li>
                         <li>
                             <a href="/contact"
-                                class="block py-2 pl-3 pr-4 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0  @if (Request::is('contact')) text-blue-700 @endif">Contact</a>
+                                class="block py-2 pl-3 pr-4 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-transparent lg:border-0 lg:hover:text-blue-700 lg:p-0  @if (Request::is(['contact'])) text-blue-700 @endif">Contact</a>
                         </li>
                         @guest
                             <li>

@@ -21,7 +21,6 @@ class ArticleFactory extends Factory
         return [
             'title' => $title,
             'slug' => Str::slug($title, '-'),
-            'excerpt' => fake()->paragraph(random_int(1, 3)),
             'thumbnail' => fake()->imageUrl(640, 480),
             'body' => collect(fake()->paragraphs(random_int(10, 20)))->map(fn ($p) => "<p>$p</p>")->implode(''),
             'user_id' => random_int(1, 30),

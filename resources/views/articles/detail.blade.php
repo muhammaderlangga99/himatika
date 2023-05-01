@@ -2,7 +2,8 @@
     <section class="content col-span-4">
 
         <div class="title border-b mb-10 border-slate-800">
-            <h1 class="text-6xl tracking-wide leading-tight font-bold font-poppins mb-5">{{ $article->title }}</h1>
+            <h1 class="text-4xl md:text-6xl tracking-wide leading-tight font-bold font-poppins mb-5">
+                {{ $article->title }}</h1>
             <p class="mb-1 text-sm tracking-wide">ditulis oleh <a href="/anggota/{{ $article->user->name }}"
                     class="ml-1 hover:underline font-poppins font-semibold">{{ Str::upper($article->user->name) }}</a>
             </p>

@@ -28,9 +28,21 @@
 
     @include('layouts.footer')
 
+    <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#type', {
+            strings: [
+                'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore cumque quas cupiditate molestias laboriosam recusandae repellendus repellat.'
+            ],
+            typeSpeed: 10,
+            showCursor: false,
+        });
+    </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        AOS.init();
+        AOS.init({
+            once: true,
+        });
     </script>
     <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-element-bundle.min.js"></script>

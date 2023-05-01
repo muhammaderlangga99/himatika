@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ArticlePageController;
 use App\Models\Article;
 use Illuminate\Http\Request;
 use Yajra\DataTables\DataTables;
@@ -54,6 +55,11 @@ Route::middleware('auth')->group(function () {
         Route::get('/articles/{article:slug}/edit', 'edit')->name('articles.edit');
         Route::put('/articles/{article:slug}', 'update')->name('articles.update');
     });
+});
+
+Route::controller(ArticlePageController::class)->group(function () {
+    Route::get('/blog', 'index')->name('articles.blog');
+    Route::get('/blog/{article:slug}', 'show')->name('articles.show');
 });
 
 Route::controller(GithubController::class)->group(function () {
