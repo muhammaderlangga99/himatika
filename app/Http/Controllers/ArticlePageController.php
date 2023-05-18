@@ -10,9 +10,15 @@ class ArticlePageController extends Controller
 {
     public function index()
     {
+        // seacrching articles by title
+        $artikel = Article::latest();
+        if (request('artikel')) {
+            $artikel->where('title', 'like', '%' . request('artikel') . '%');
+        }
+
         return view('blog.index', [
             'page' => 'Blog',
-            'articles' => Article::latest()->paginate(13),
+            'articles' => $artikel->paginate(13)->withQueryString(),
             'categories' => Category::all(),
         ]);
     }

@@ -19,7 +19,7 @@
                         class="inline-flex items-center justify-center w-full px-5 py-3 text-sm font-medium text-center border border-gray-200 shadow-inner rounded-full sm:w-auto hover:bg-gray-100 focus:ring-4 focus:ring-gray-100"><i
                             class="bi bi-github pr-2"></i> View on GitHub
                     </a>
-                    <a href="https://www.figma.com/community/file/1125744163617429490"
+                    <a href="/anggota"
                         class="inline-flex items-center justify-center w-full px-5 py-3 mb-2 mr-2 text-sm font-medium bg-blue-600 border border-gray-200 rounded-full sm:w-auto focus:outline-none hover:bg-blue-800 hover:text-slate-50 focus:z-10 shadow-lg shadow-blue-100 focus:ring-4 focus:ring-gray-200 text-white"><i
                             class="bi bi-people-fill pr-2"></i> Anggota</a>
                 </div>

@@ -7,6 +7,8 @@ use App\Models\Category;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Yajra\DataTables\DataTables;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 use Yajra\DataTables\Contracts\DataTable;
 
 class ArticlesController extends Controller
@@ -112,6 +114,7 @@ class ArticlesController extends Controller
 
         if ($request->hasFile('thumbnail')) {
             $thumbnail = $request->file('thumbnail')->store('thumbnail');
+            Storage::delete($article->thumbnail);
         } else {
             $thumbnail = $article->thumbnail;
         }
@@ -136,6 +139,9 @@ class ArticlesController extends Controller
      */
     public function destroy(Article $article)
     {
+        if ($article->thumbnail) {
+            Storage::delete($article->thumbnail);
+        }
         Article::destroy($article->id);
         return redirect()->route('articles.index')->with('success', 'Artikel berhasil dihapus');
     }

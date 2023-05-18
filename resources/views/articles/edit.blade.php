@@ -21,7 +21,7 @@
                                     <div class="flex mb-6 items-center justify-center w-full">
                                         <label for="dropzone-file"
                                             class="flex flex-col items-center justify-center w-full h-64 border-2 border-gray-300 text-gray-400 @if ($errors->has('thumbnail')) text-red-600 border-red-600 @endif border-dashed rounded-lg cursor-pointer bg-gray-50">
-                                            <div class="flex flex-col items-center justify-center pt-5 pb-6">
+                                            <div class="flex flex-col items-center justify-center pt-5 pb-6 relative">
                                                 <svg aria-hidden="true" class="w-10 h-10 mb-3" fill="none"
                                                     stroke="currentColor" viewBox="0 0 24 24"
                                                     xmlns="http://www.w3.org/2000/svg">
@@ -34,7 +34,8 @@
                                                         gambar untuk thumbnail artikel</span></p>
                                                 <p class="text-xs">SVG, PNG, JPG</p>
                                             </div>
-                                            <input id="dropzone-file" type="file" class="hidden" name="thumbnail" />
+                                            <input id="dropzone-file" type="file" class="hidden" name="thumbnail"
+                                                onchange="ImagePreview()" />
                                             @if ($errors->has('thumbnail'))
                                                 <span class="text-red-500">*{{ $errors->first('thumbnail') }}</span>
                                             @endif

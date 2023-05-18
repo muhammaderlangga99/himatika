@@ -21,6 +21,7 @@ class UserFactory extends Factory
         return [
             'name' => fake()->name(),
             'email' => fake()->unique()->safeEmail(),
+            'roles' => 'guest',
             'email_verified_at' => now(),
             'password' => Hash::make('muhammad'), // password
             'instagram' => fake()->userName(),

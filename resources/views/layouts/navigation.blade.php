@@ -55,7 +55,7 @@
                     class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
                     <div class="px-4 py-3 text-sm text-gray-900">
                         <div class="font-bold truncate">{{ auth()->user()->name }}</div>
-                        <div class="truncate">{{ auth()->user()->email }}</div>
+                        <div class="truncate">{{ auth()->user()->roles }}</div>
                     </div>
                     <ul class="py-2 text-sm text-gray-700"
                         aria-labelledby="dropdownInformdropdownAvatarNameButtonationButton">
